@@ -18,4 +18,5 @@ return require("packer").startup(function(use)
 	use("L3MON4D3/LuaSnip") -- Snippets plugin
 	use("lambdalisue/suda.vim") -- Saving files as su
 	use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } }) -- fuzzy finder
+	use({ "nvim-lualine/lualine.nvim", requires = { { "kyazdani42/nvim-web-devicons", opt = true } } }) -- statusbar
 end)
