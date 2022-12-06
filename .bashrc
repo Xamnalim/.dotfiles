@@ -98,9 +98,12 @@ eval "$(starship init bash)"
 
 . "$HOME/.cargo/env"
 
-# GO
+# go
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+
+# nodejs
+export  PATH=$PATH:/usr/local//nodejs/bin
 
 # default text editor
 export VISUAL=vim
