@@ -25,4 +25,16 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
 . "$HOME/.cargo/env"
+
+# go
+GOPATH=$HOME/go
+PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+
+# nodejs
+PATH=$PATH:/usr/local/nodejs/bin
+
+# default text editor
+VISUAL=vim
+EDITOR="$VISUAL"
