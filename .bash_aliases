@@ -9,5 +9,5 @@ alias egrep='egrep --color=auto'
 alias y='xclip'
 alias p='xclip -o'
 
-alias config='git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+alias config='git --git-dir=$HOME/dotfiles.git --work-tree=$HOME'
 
