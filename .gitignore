@@ -1,0 +1,22 @@
+# ignore everything
+/*
+
+!.gitignore
+!.bash_aliases
+!.bashrc
+!.dir_colors
+!.gitconfig
+!.profile
+!.tmux.conf
+
+# github readme
+!/.github
+/.github/*
+!/.github/README.md
+
+!/.config
+/.config/*
+!/.config/nvim
+/.config/nvim/plugin/packer_compiled.lua
+!/.config/alacritty
+
