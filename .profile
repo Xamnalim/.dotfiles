@@ -16,25 +16,39 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+prependToPathFront() {
+    if [[ "$PATH" != *"$1"* ]]; then
+        export PATH=$1:$PATH
+    fi
+}
+
+appendToPath() {
+    if [[ "$PATH" != *"$1"* ]]; then
+        export PATH=$PATH:$1
+    fi
+}
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+    prependToPathFront "$HOME/bin"
 fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
+    prependToPathFront "$HOME/.local/bin"
 fi
 
+# rust 
 . "$HOME/.cargo/env"
 
 # go
-GOPATH=$HOME/go
-PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export GOPATH=$HOME/go
+prependToPathFront '/usr/local/go/bin'
+prependToPathFront "$GOPATH/bin"
 
 # nodejs
-PATH=$PATH:/usr/local/nodejs/bin
+prependToPathFront '/usr/local/nodejs/bin'
 
 # default text editor
-VISUAL=vim
-EDITOR="$VISUAL"
+export VISUAL=vim
+export EDITOR="$VISUAL"
