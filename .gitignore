@@ -8,6 +8,8 @@
 !.gitconfig
 !.profile
 !.tmux.conf
+!.psqlrc
+!.pspgconf
 
 # github readme
 !/.github
@@ -16,7 +18,16 @@
 
 !/.config
 /.config/*
+
+# neovim
 !/.config/nvim
 /.config/nvim/plugin/packer_compiled.lua
+
+# alacritty
 !/.config/alacritty
+
+# pgcli
+!/.config/pgcli/
+/.config/pgcli/*
+!/.config/pgcli/config
 
