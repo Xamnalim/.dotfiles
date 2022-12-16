@@ -31,3 +31,8 @@
 /.config/pgcli/*
 !/.config/pgcli/config
 
+# gitui
+!/.config/gitui/
+/.config/gitui/*
+!/.config/gitui/key_bindings.ron
+
