@@ -52,3 +52,9 @@ prependToPathFront '/usr/local/nodejs/bin'
 # default text editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+if [ -f '/usr/bin/batcat' ] ; then
+    export BAT_THEME='Nord'
+    export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+fi
+
