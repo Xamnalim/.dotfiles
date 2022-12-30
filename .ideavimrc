@@ -28,3 +28,11 @@ nnoremap <leader>d \"_d
 vnoremap <leader>d \"_d
 
 xnoremap <leader>p \"_dP
+
+nmap <leader>vd <Action>(ShowErrorDescription)
+nmap ]d <Action>(GotoNextError)
+nmap [d <Action>(GotoPreviousError)
+nmap gi <Action>(GotoImplementation)
+nmap <leader>vrn <Action>(RenameElement)
+nmap <leader>vrr <Action>(GotoDeclaration)
+
