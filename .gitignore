@@ -10,6 +10,7 @@
 !.tmux.conf
 !.psqlrc
 !.pspgconf
+!.ideavimrc
 
 # github readme
 !/.github

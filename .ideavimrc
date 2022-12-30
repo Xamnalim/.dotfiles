@@ -1,0 +1,30 @@
+let mapleader=" "
+
+""" Plugins
+set highlightedyank
+
+""" Common settings
+set so=8
+set showmode
+set showcmd
+set incsearch
+set nohlsearch
+set relativenumber
+set visualbell
+set noerrorbells
+
+""" Idea specific
+set ideajoin
+
+""" Remaps
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+
+nnoremap <leader>y \"+y
+vnoremap <leader>y \"+y
+
+nnoremap <leader>d \"_d
+vnoremap <leader>d \"_d
+
+xnoremap <leader>p \"_dP
