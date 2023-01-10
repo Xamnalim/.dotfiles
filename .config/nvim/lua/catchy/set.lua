@@ -13,7 +13,7 @@ vim.opt.wrap = false -- don't wrap lines
 vim.opt.incsearch = true -- highlight search results while typing
 vim.opt.scrolloff = 8 -- distance to keep while scrolling
 vim.opt.signcolumn = "yes" -- special column at the beginning of each line
-vim.opt.colorcolumn = "88" -- color column indicating length of the line
+vim.opt.colorcolumn = "80,120" -- color column indicating length of the line
 vim.opt.title = true
 
 vim.g.mapleader = " " -- leader key for custom shortcuts
