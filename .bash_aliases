@@ -12,3 +12,5 @@ alias p='xclip -o'
 alias config='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 
 alias bat='batcat' # bat is called batcat on ubuntu
+
+alias asd='tmux_attach_default_session'

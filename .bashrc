@@ -84,6 +84,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  tmux new -A -s 'default'
-fi
+function tmux_attach_default_session() {
+    if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+      tmux new -A -s 'default'
+    fi
+}
+
