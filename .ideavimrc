@@ -12,6 +12,7 @@ set nohlsearch
 set relativenumber
 set visualbell
 set noerrorbells
+set nu
 
 """ Idea specific
 set ideajoin
