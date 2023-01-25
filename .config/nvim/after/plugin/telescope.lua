@@ -11,9 +11,9 @@ nnoremap("<leader>fh", builtin.help_tags) -- Find Help tags
 nnoremap("<leader>fb", builtin.buffers) -- Find Buffers
 
 -- LSP pickers
-nnoremap("<leader>frr", builtin.lsp_references) -- Find References
-nnoremap("<leader>fds", builtin.lsp_document_symbols) -- Find Document Symbols 
-nnoremap("<leader>fvd", builtin.diagnostics) -- Find (View) Diagnostics 
+nnoremap("<leader>vrr", builtin.lsp_references) -- View References
+nnoremap("<leader>vws", builtin.lsp_document_symbols) -- View Document Symbols 
+nnoremap("<leader>vd", builtin.diagnostics) -- View Diagnostics 
 nnoremap("<leader>gi", builtin.lsp_implementations) -- Goto Implementation/s
 nnoremap("<leader>gd", builtin.lsp_definitions) -- Goto Definition/s
 
