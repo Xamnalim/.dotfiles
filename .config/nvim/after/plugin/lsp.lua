@@ -8,14 +8,10 @@ local function config(_config)
 	return vim.tbl_deep_extend("force", {
 		on_attach = function()
 			nnoremap("<leader>vd", vim.diagnostic.open_float)
-			nnoremap("]d", vim.diagnostic.goto_prev)
-			nnoremap("[d", vim.diagnostic.goto_next)
-			nnoremap("gd", vim.lsp.buf.definition)
-			nnoremap("gi", vim.lsp.buf.implementation)
+			nnoremap("[d", vim.diagnostic.goto_prev)
+			nnoremap("]d", vim.diagnostic.goto_next)
 			nnoremap("K", vim.lsp.buf.hover)
-			nnoremap("<leader>vws", vim.lsp.buf.workspace_symbol)
-			nnoremap("<leader>vrr", vim.lsp.buf.references)
-			nnoremap("<leader>vrn", vim.lsp.buf.rename)
+			nnoremap("<leader>rn", vim.lsp.buf.rename)
 			nnoremap("<C-h>", vim.lsp.buf.signature_help)
 		end,
 		capabilities = capabilities,
