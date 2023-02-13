@@ -8,7 +8,7 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-# if running bash
+if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
     if [ -f "$HOME/.bashrc" ]; then
@@ -52,6 +52,7 @@ prependToPathFront '/usr/local/nodejs/bin'
 # default text editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
+export TIME_STYLE=long-iso # time format used by ls
 
 if [ -f '/usr/bin/batcat' ] ; then
     export BAT_THEME='Nord'

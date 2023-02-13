@@ -4,6 +4,7 @@
 !.gitignore
 !.bash_aliases
 !.bashrc
+!.zshrc
 !.dir_colors
 !.gitconfig
 !.profile
