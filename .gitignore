@@ -5,6 +5,7 @@
 !.bash_aliases
 !.bashrc
 !.zshrc
+!.p10k.zsh
 !.dir_colors
 !.gitconfig
 !.profile
