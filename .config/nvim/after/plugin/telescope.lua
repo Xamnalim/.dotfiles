@@ -12,14 +12,12 @@ nnoremap("<leader>fb", builtin.buffers) -- Find Buffers
 
 -- LSP pickers
 nnoremap("<leader>vrr", builtin.lsp_references) -- View References
-nnoremap("<leader>vws", builtin.lsp_document_symbols) -- View Document Symbols 
-nnoremap("<leader>vd", builtin.diagnostics) -- View Diagnostics 
+nnoremap("<leader>vws", builtin.lsp_document_symbols) -- View Document Symbols
+nnoremap("<leader>vd", builtin.diagnostics) -- View Diagnostics
 nnoremap("<leader>gi", builtin.lsp_implementations) -- Goto Implementation/s
 nnoremap("<leader>gd", builtin.lsp_definitions) -- Goto Definition/s
 
 -- git pickers
 nnoremap("<leader>glo", builtin.git_commits) -- Git List cOmmits
-nnoremap("<leader>glbo", builtin.git_bcommits) -- Git List Buffer cOmmits 
+nnoremap("<leader>glbo", builtin.git_bcommits) -- Git List Buffer cOmmits
 nnoremap("<leader>gbr", builtin.git_branches) -- Git List Branches
-nnoremap("<leader>gst", builtin.git_status) -- git status/changes
-
