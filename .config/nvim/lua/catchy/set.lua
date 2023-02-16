@@ -16,4 +16,10 @@ vim.opt.signcolumn = "yes" -- special column at the beginning of each line
 vim.opt.colorcolumn = "80,120" -- color column indicating length of the line
 vim.opt.title = true
 
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
+
 vim.g.mapleader = " " -- leader key for custom shortcuts
+

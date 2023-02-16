@@ -1,5 +1,3 @@
-local Remap = require("catchy.keymap")
-
 local lsp = require("lsp-zero")
 lsp.preset("recommended")
 lsp.ensure_installed({
@@ -44,23 +42,26 @@ lsp.setup_nvim_cmp({
 	mapping = cmp_mappings,
 })
 
+local Remap = require("catchy.keymap")
+local nnoremap = Remap.nnoremap
+local inoremap = Remap.inoremap
 local telescope = require("telescope.builtin")
 lsp.on_attach(function(client, bufnr)
 	local opts = { buffer = bufnr, remap = false }
 
-	vim.keymap.set("n", "<leader>vd", vim.diagnostic.open_float, opts)
-	vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
-	vim.keymap.set("n", "d]", vim.diagnostic.goto_next, opts)
-	vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-	vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action, opts)
-	vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, opts)
-	vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
+	nnoremap("<leader>vd", vim.diagnostic.open_float, opts)
+	nnoremap("[d", vim.diagnostic.goto_prev, opts)
+	nnoremap("d]", vim.diagnostic.goto_next, opts)
+	nnoremap("K", vim.lsp.buf.hover, opts)
+	nnoremap("<leader>vca", vim.lsp.buf.code_action, opts)
+	nnoremap("<leader>vrn", vim.lsp.buf.rename, opts)
+	inoremap("<C-h>", vim.lsp.buf.signature_help, opts)
 
-	vim.keymap.set("n", "<leader>vrr", telescope.lsp_references, opts)
-	vim.keymap.set("n", "<leader>vws", telescope.lsp_document_symbols, opts)
-	vim.keymap.set("n", "<leader>vd", telescope.diagnostics, opts)
-	vim.keymap.set("n", "<leader>gi", telescope.lsp_implementations, opts)
-	vim.keymap.set("n", "<leader>gd", telescope.lsp_definitions, opts)
+	nnoremap("<leader>vrr", telescope.lsp_references, opts)
+	nnoremap("<leader>vws", telescope.lsp_document_symbols, opts)
+	nnoremap("<leader>vd", telescope.diagnostics, opts)
+	nnoremap("<leader>gi", telescope.lsp_implementations, opts)
+	nnoremap("<leader>gd", telescope.lsp_definitions, opts)
 end)
 
 lsp.setup()
