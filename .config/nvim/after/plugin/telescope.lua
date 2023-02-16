@@ -1,6 +1,6 @@
-local builtin = require("telescope.builtin")
 local Remap = require("catchy.keymap")
 local nnoremap = Remap.nnoremap
+local builtin = require("telescope.builtin")
 
 -- file pickers
 nnoremap("<leader>ff", builtin.find_files) -- Find Files
@@ -9,13 +9,6 @@ nnoremap("<leader>fh", builtin.help_tags) -- Find Help tags
 
 -- vim pickers
 nnoremap("<leader>fb", builtin.buffers) -- Find Buffers
-
--- LSP pickers
-nnoremap("<leader>vrr", builtin.lsp_references) -- View References
-nnoremap("<leader>vws", builtin.lsp_document_symbols) -- View Document Symbols
-nnoremap("<leader>vd", builtin.diagnostics) -- View Diagnostics
-nnoremap("<leader>gi", builtin.lsp_implementations) -- Goto Implementation/s
-nnoremap("<leader>gd", builtin.lsp_definitions) -- Goto Definition/s
 
 -- git pickers
 nnoremap("<leader>glo", builtin.git_commits) -- Git List cOmmits
