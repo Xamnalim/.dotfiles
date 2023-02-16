@@ -45,9 +45,6 @@ export GOPATH=$HOME/go
 prependToPathFront '/usr/local/go/bin'
 prependToPathFront "$GOPATH/bin"
 
-# nodejs
-prependToPathFront '/usr/local/nodejs/bin'
-
 # default text editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
