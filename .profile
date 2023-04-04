@@ -51,7 +51,7 @@ export EDITOR="$VISUAL"
 export TIME_STYLE=long-iso # time format used by ls
 
 if [ -f '/usr/bin/batcat' ] ; then
-    export BAT_THEME='Nord'
+    export BAT_THEME='Catppuccin-mocha'
     export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 fi
 
