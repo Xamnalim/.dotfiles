@@ -27,7 +27,8 @@
 /.config/nvim/plugin/packer_compiled.lua
 
 # alacritty
-!/.config/alacritty
+!/.config/alacritty/alacritty.yml
+
 
 # pgcli
 !/.config/pgcli/
