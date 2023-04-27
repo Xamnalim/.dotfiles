@@ -46,7 +46,11 @@ prependToPathFront '/usr/local/go/bin'
 prependToPathFront "$GOPATH/bin"
 
 # default text editor
-export VISUAL=vim
+alias vi="nvim"
+alias vim="nvim"
+alias view="nvim -R"
+alias vimdiff="nvim -d"
+export VISUAL=nvim
 export EDITOR="$VISUAL"
 export TIME_STYLE=long-iso # time format used by ls
 
