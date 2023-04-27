@@ -83,7 +83,7 @@ lsp.on_attach(function(client, bufnr)
 
 	nnoremap("<leader>vrr", telescope.lsp_references, opts)
 	nnoremap("<leader>vws", telescope.lsp_document_symbols, opts)
-	nnoremap("<leader>vd", telescope.diagnostics, opts)
+	nnoremap("<leader>fd", telescope.diagnostics, opts)
 	nnoremap("<leader>gi", telescope.lsp_implementations, opts)
 	nnoremap("<leader>gd", telescope.lsp_definitions, opts)
 end)

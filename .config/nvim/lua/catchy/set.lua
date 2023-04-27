@@ -15,6 +15,7 @@ vim.opt.scrolloff = 8 -- distance to keep while scrolling
 vim.opt.signcolumn = "yes" -- special column at the beginning of each line
 vim.opt.colorcolumn = "80,120" -- color column indicating length of the line
 vim.opt.title = true
+vim.opt.smartindent = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
