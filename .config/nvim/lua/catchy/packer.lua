@@ -3,15 +3,21 @@ vim.cmd([[packadd packer.nvim]])
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 	-- use("arcticicestudio/nord-vim")
-    use({ "catppuccin/nvim", as = "catppuccin" })
+	use({ "catppuccin/nvim", as = "catppuccin" })
 	use("sbdchd/neoformat")
 	use("lambdalisue/suda.vim")
 	use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } }, tag = "0.1.1" })
-	use({ "nvim-lualine/lualine.nvim", requires = { { "kyazdani42/nvim-web-devicons", opt = true } } })
+	use({ "nvim-lualine/lualine.nvim", requires = { { "nvim-tree/nvim-web-devicons", opt = true } } })
 	use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 	use("theprimeagen/harpoon")
 	use("mbbill/undotree")
 	use("tpope/vim-fugitive")
+	use({
+		"windwp/nvim-autopairs",
+		config = function()
+			require("nvim-autopairs").setup({})
+		end,
+	})
 
 	use({
 		"VonHeikemen/lsp-zero.nvim",
