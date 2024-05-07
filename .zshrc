@@ -127,3 +127,6 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Go Version Manager
+[[ -s "/home/milan/.gvm/scripts/gvm" ]] && source "/home/milan/.gvm/scripts/gvm"

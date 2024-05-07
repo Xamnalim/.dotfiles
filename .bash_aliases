@@ -6,8 +6,8 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-alias y='xclip'
-alias p='xclip -o'
+alias y='xclip -selection clipboard'
+alias p='xclip -o -selection clipboard'
 
 alias config='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 
