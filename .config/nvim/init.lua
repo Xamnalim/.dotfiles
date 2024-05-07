@@ -1,1 +1,5 @@
-require("catchy")
+require("xamnalim.opt")
+require("xamnalim.lazy")
+require("xamnalim.cmd")
+require("xamnalim.autocmd")
+require("xamnalim.keymap")
