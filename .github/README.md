@@ -16,3 +16,8 @@ git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME checkout main
 * https://github.com/tmux-plugins/tpm
 ### other
 * https://github.com/lsd-rs/lsd
+* https://github.com/BurntSushi/ripgrep
+* https://github.com/dbcli/pgcli
+* https://github.com/Extrawurst/gitui
+* https://github.com/sharkdp/bat
+* https://github.com/dundee/gdu
