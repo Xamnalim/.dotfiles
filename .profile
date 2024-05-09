@@ -37,9 +37,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     prependToPathFront "$HOME/.local/bin"
 fi
 
-# rust 
-. "$HOME/.cargo/env"
-
 # go
 export GOPATH=$HOME/go
 prependToPathFront '/usr/local/go/bin'
