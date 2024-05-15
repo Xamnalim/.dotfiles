@@ -16,9 +16,9 @@ vim.keymap.set(
 )
 vim.keymap.set(
     "n",
-    "<leader>e",
+    "<leader>vd",
     vim.diagnostic.open_float,
-    { desc = "Show diagnostic [E]rror messages" }
+    { desc = "[V]iew [D]iagnostic error messages" }
 )
 vim.keymap.set(
     "n",
