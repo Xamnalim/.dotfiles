@@ -124,9 +124,9 @@ return {
         )
         vim.keymap.set(
             "n",
-            "<leader><leader>",
+            "<leader>fb",
             builtin.buffers,
-            { desc = "[ ] Find existing buffers" }
+            { desc = "[F]ind existing [B]uffers" }
         )
 
         -- Slightly advanced example of overriding default behavior and theme
