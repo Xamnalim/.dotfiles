@@ -16,9 +16,9 @@ vim.keymap.set(
 )
 vim.keymap.set(
     "n",
-    "<C-e>",
+    "<leader>vd",
     vim.diagnostic.open_float,
-    { desc = "Diagnostic [E]rror messages" }
+    { desc = "[V]iew [D]iagnostic error messages" }
 )
 vim.keymap.set(
     "n",
@@ -78,8 +78,8 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<leader>y", '"+y', { desc = "[Y]ank to clipboard"})
 vim.keymap.set("v", "<leader>y", '"+y', { desc = "[Y]ank to clipboard"})
 vim.keymap.set("v", "<leader>Y", '"+Y', { desc = "[Y]ank to clipboard"})
-vim.keymap.set("n", "<leader>d", '"_d')
-vim.keymap.set("v", "<leader>d", '"_d')
+vim.keymap.set("n", "<leader>d", '"_d', { desc = "[D]elete without registering"})
+vim.keymap.set("v", "<leader>d", '"_d', { desc = "[D]elete without registering"})
 vim.keymap.set("x", "<leader>p", '"_dP')
 
 

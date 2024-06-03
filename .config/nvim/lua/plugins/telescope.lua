@@ -88,12 +88,6 @@ return {
         )
         vim.keymap.set(
             "n",
-            "<leader>fs",
-            builtin.builtin,
-            { desc = "[F]ind [S]elect Telescope" }
-        )
-        vim.keymap.set(
-            "n",
             "<leader>fw",
             builtin.grep_string,
             { desc = "[F]ind current [W]ord" }

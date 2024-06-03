@@ -21,7 +21,7 @@ return {
         local function active_lsp_name()
             local msg = "No Lsp"
             local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-            local clients = vim.lsp.get_active_clients()
+            local clients = vim.lsp.get_clients()
             if next(clients) == nil then
                 return " " .. msg
             end
@@ -31,7 +31,7 @@ return {
                     return client.name
                 end
             end
-            return msg
+            return " " .. msg
         end
 
         return {

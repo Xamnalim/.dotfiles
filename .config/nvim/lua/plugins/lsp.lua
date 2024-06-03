@@ -97,17 +97,17 @@ return { -- LSP Configuration & Plugins
                 -- Fuzzy find all the symbols in your current document.
                 --  Symbols are things like variables, functions, types, etc.
                 map(
-                    "<leader>ds",
+                    "<leader>fsd",
                     require("telescope.builtin").lsp_document_symbols,
-                    "[D]ocument [S]ymbols"
+                    "[F]ind [S]ymbols in [D]ocument"
                 )
 
                 -- Fuzzy find all the symbols in your current workspace
                 --  Similar to document symbols, except searches over your whole project.
                 map(
-                    "<leader>ws",
+                    "<leader>fsw",
                     require("telescope.builtin").lsp_dynamic_workspace_symbols,
-                    "[W]orkspace [S]ymbols"
+                    "[F]ind [S]ymbols in [W]orkspace"
                 )
 
                 -- Rename the variable under your cursor
