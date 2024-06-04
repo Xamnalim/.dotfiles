@@ -11,7 +11,7 @@
 	br = branch
 	ci = commit
 	st = status
-    sw = switch
+	sw = switch
 	unstage = reset HEAD --
 	last = log --pretty=fuller -1 HEAD
 	lol = log --pretty=oneline --abbrev-commit --graph --decorate
