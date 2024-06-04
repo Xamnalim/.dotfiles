@@ -29,7 +29,6 @@
 # alacritty
 !/.config/alacritty/alacritty.yml
 
-
 # pgcli
 !/.config/pgcli/
 /.config/pgcli/*
@@ -39,4 +38,9 @@
 !/.config/gitui/
 /.config/gitui/*
 !/.config/gitui/key_bindings.ron
+
+# lazygit
+!/.config/lazygit/
+/.config/lazygit/*
+!/.config/lazygit/config.yml
 
