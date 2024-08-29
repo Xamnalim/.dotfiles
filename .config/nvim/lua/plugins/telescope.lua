@@ -22,6 +22,7 @@ return {
 
         -- Useful for getting pretty icons, but requires a Nerd Font.
         { "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
+        { "jemag/telescope-diff.nvim" },
     },
     config = function()
         -- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -65,6 +66,7 @@ return {
         -- Enable telescope extensions, if they are installed
         pcall(require("telescope").load_extension, "fzf")
         pcall(require("telescope").load_extension, "ui-select")
+        pcall(require("telescope").load_extension, "diff")
 
         -- See `:help telescope.builtin`
         local builtin = require("telescope.builtin")
@@ -147,5 +149,14 @@ return {
         vim.keymap.set("n", "<leader>fn", function()
             builtin.find_files({ cwd = vim.fn.stdpath("config") })
         end, { desc = "[F]ind [N]eovim files" })
+
+        -- Shortcuts for telescope-diff
+        vim.keymap.set("n", "<leader>fc", function()
+            require("telescope").extensions.diff.diff_current({ hidden = true })
+        end, { desc = "[F]ind [C]ompare current file with..." })
+
+        vim.keymap.set("n", "<leader>fC", function()
+            require("telescope").extensions.diff.diff_files({ hidden = true })
+        end, { desc = "[F]ind [C]ompare files" })
     end,
 }

@@ -6,15 +6,12 @@ return {
         require("which-key").setup()
 
         -- Document existing key chains
-        require("which-key").register({
-            ["<leader>c"] = { name = "[C]ode", _ = "which_key_ignore" },
-            ["<leader>r"] = { name = "[R]ename", _ = "which_key_ignore" },
-            ["<leader>f"] = {
-                name = "[F]ind",
-                _ = "which_key_ignore",
-                s = "[S]ymbols",
-            },
-            ["<leader>v"] = { name = "[V]iew", _ = "which_key_ignore" },
+        require("which-key").add({
+            { "<leader>c", group = "[C]ode" },
+            { "<leader>f", group = "[F]ind" },
+            { "<leader>fs", group = "[S]ymbols" },
+            { "<leader>r", group = "[R]ename" },
+            { "<leader>v", group = "[V]iew" },
         })
     end,
 }
