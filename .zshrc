@@ -115,6 +115,48 @@ source $ZSH/oh-my-zsh.sh
 
 setopt nullglob
 
+prependToPathFront() {
+    if [[ "$PATH" != *"$1"* ]]; then
+        export PATH=$1:$PATH
+    fi
+}
+
+appendToPath() {
+    if [[ "$PATH" != *"$1"* ]]; then
+        export PATH=$PATH:$1
+    fi
+}
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    prependToPathFront "$HOME/bin"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    prependToPathFront "$HOME/.local/bin"
+fi
+
+# go
+export GOPATH=$HOME/go
+prependToPathFront '/usr/local/go/bin'
+prependToPathFront "$GOPATH/bin"
+
+# default text editor
+alias vi="nvim"
+alias vim="nvim"
+alias view="nvim -R"
+alias vimdiff="nvim -d"
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+export TIME_STYLE=long-iso # time format used by ls
+
+if [ -f '/usr/bin/batcat' ] ; then
+    export BAT_THEME='Catppuccin-mocha'
+    export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
+fi
+
+
 function tmux_attach_default_session() {
     if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
       tmux new -A -s 'default'
