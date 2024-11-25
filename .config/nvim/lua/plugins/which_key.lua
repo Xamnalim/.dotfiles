@@ -12,6 +12,7 @@ return {
             { "<leader>fs", group = "[S]ymbols" },
             { "<leader>r", group = "[R]ename" },
             { "<leader>v", group = "[V]iew" },
+            { "<leader>g", group = "[G]oto" },
         })
     end,
 }
