@@ -16,7 +16,8 @@ return {
     },
     ft = { "sql", "mysql", "plsql" },
     keys = {
-        { "<leader>D", "<cmd>DBUIToggle<CR>", desc = "Toggle DBUI" },
+        { "<leader>DD", "<cmd>DBUIToggle<CR>", desc = "Toggle DBUI" },
+        { "<leader>Da", "<cmd>DBUIFindBuffer<CR>", desc = "Attach buffer to DB conn" },
     },
     init = function()
         vim.g.db_ui_use_nerd_fonts = true
